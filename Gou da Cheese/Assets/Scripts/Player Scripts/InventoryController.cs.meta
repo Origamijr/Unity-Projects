@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f6e85a6514843024b83630addf050f6e
+timeCreated: 1483187269
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - inventoryPanel: {instanceID: 0}
+  - panelSlot: {instanceID: 0}
+  - panelImage: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

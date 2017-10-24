@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 521f20890dcb62c42921b8ad5a612703
+timeCreated: 1483271645
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bow
+    100004: //RootNode
+    100006: LowerHandle
+    100008: LowerIK
+    100010: LowerLimb_002
+    100012: LowerLimb_003
+    100014: LowerLimb_004
+    100016: LowerLimb_005
+    100018: LowerLimit
+    100020: LowerRotator
+    100022: Puller
+    100024: Root
+    100026: UpperHandle_1
+    100028: UpperIK
+    100030: UpperLimb_001
+    100032: UpperLimb_002
+    100034: UpperLimb_003
+    100036: UpperLimb_004
+    100038: UpperLimb_005
+    100040: UpperLimb_006
+    100042: UpperLimit
+    100044: UpperRotator
+    400000: Armature
+    400002: Bow
+    400004: //RootNode
+    400006: LowerHandle
+    400008: LowerIK
+    400010: LowerLimb_002
+    400012: LowerLimb_003
+    400014: LowerLimb_004
+    400016: LowerLimb_005
+    400018: LowerLimit
+    400020: LowerRotator
+    400022: Puller
+    400024: Root
+    400026: UpperHandle_1
+    400028: UpperIK
+    400030: UpperLimb_001
+    400032: UpperLimb_002
+    400034: UpperLimb_003
+    400036: UpperLimb_004
+    400038: UpperLimb_005
+    400040: UpperLimb_006
+    400042: UpperLimit
+    400044: UpperRotator
+    4300000: Bow
+    7400000: Default Take
+    7400002: Draw
+    7400004: Full_Action
+    7400006: Release
+    7400008: Nothing
+    9500000: //RootNode
+    13700000: Bow
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Draw
+      takeName: Draw
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LowerHandle
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004/LowerLimb_005
+        weight: 1
+      - path: Armature/Root/LowerLimit
+        weight: 1
+      - path: Armature/Root/LowerRotator
+        weight: 1
+      - path: Armature/Root/LowerRotator/LowerIK
+        weight: 1
+      - path: Armature/Root/Puller
+        weight: 1
+      - path: Armature/Root/UpperHandle_1
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004/UpperLimb_005
+        weight: 1
+      - path: Armature/Root/UpperLimit
+        weight: 1
+      - path: Armature/Root/UpperRotator
+        weight: 1
+      - path: Armature/Root/UpperRotator/UpperIK
+        weight: 1
+      - path: Bow
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Full_Action
+      takeName: Full_Action
+      firstFrame: 0
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LowerHandle
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004/LowerLimb_005
+        weight: 1
+      - path: Armature/Root/LowerLimit
+        weight: 1
+      - path: Armature/Root/LowerRotator
+        weight: 1
+      - path: Armature/Root/LowerRotator/LowerIK
+        weight: 1
+      - path: Armature/Root/Puller
+        weight: 1
+      - path: Armature/Root/UpperHandle_1
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004/UpperLimb_005
+        weight: 1
+      - path: Armature/Root/UpperLimit
+        weight: 1
+      - path: Armature/Root/UpperRotator
+        weight: 1
+      - path: Armature/Root/UpperRotator/UpperIK
+        weight: 1
+      - path: Bow
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Release
+      takeName: Release
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LowerHandle
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004/LowerLimb_005
+        weight: 1
+      - path: Armature/Root/LowerLimit
+        weight: 1
+      - path: Armature/Root/LowerRotator
+        weight: 1
+      - path: Armature/Root/LowerRotator/LowerIK
+        weight: 1
+      - path: Armature/Root/Puller
+        weight: 1
+      - path: Armature/Root/UpperHandle_1
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004/UpperLimb_005
+        weight: 1
+      - path: Armature/Root/UpperLimit
+        weight: 1
+      - path: Armature/Root/UpperRotator
+        weight: 1
+      - path: Armature/Root/UpperRotator/UpperIK
+        weight: 1
+      - path: Bow
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Nothing
+      takeName: Full_Action
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/LowerHandle
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004
+        weight: 1
+      - path: Armature/Root/LowerHandle/UpperLimb_006/LowerLimb_002/LowerLimb_003/LowerLimb_004/LowerLimb_005
+        weight: 1
+      - path: Armature/Root/LowerLimit
+        weight: 1
+      - path: Armature/Root/LowerRotator
+        weight: 1
+      - path: Armature/Root/LowerRotator/LowerIK
+        weight: 1
+      - path: Armature/Root/Puller
+        weight: 1
+      - path: Armature/Root/UpperHandle_1
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004
+        weight: 1
+      - path: Armature/Root/UpperHandle_1/UpperLimb_001/UpperLimb_002/UpperLimb_003/UpperLimb_004/UpperLimb_005
+        weight: 1
+      - path: Armature/Root/UpperLimit
+        weight: 1
+      - path: Armature/Root/UpperRotator
+        weight: 1
+      - path: Armature/Root/UpperRotator/UpperIK
+        weight: 1
+      - path: Bow
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
