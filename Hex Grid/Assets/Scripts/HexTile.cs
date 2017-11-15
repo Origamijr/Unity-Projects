@@ -1,0 +1,134 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HexTile : MonoBehaviour {
+
+    // Axial coordinates
+    private int x, y, z;
+
+    // Cartesian Coordinates
+    private float geomX, geomY;
+    public float radius = 0.5f;
+
+    // Data
+    private int data;
+
+    // GameObjects
+    public GameObject tileObject;
+
+    // Constants
+    private float SQRT_3 = Mathf.Sqrt(3f);
+
+    // Static variables
+    private static HexTile focusTile = null;
+
+
+    /**
+     * Method called upon instantiation
+     */
+    void Start() {
+        SetData(0);
+    }
+
+    public int GetX() {
+        return x;
+    }
+
+    public int GetY() {
+        return y;
+    }
+
+    public int GetZ() {
+        return z;
+    }
+
+    public int GetGeomX() {
+        return geomX;
+    }
+
+    public int GetGeomY() {
+        return geomY;
+    }
+
+    public HexTile GetFocus() {
+        return focusTile;
+    }
+
+    /**
+     * Set the position of the tile given axial coordinates
+     * @param x - the x coord
+     * @param y - the y coord
+     * @param z - the z coord
+     */
+    public void SetAxial(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+
+        // Geometric conversion
+        geomX = x * radius - z * radius;
+        geomY = y * 3 * radius / SQRT_3;
+
+        this.transform.position = new Vector3(geomX, 0, geomY);
+    }
+
+    /**
+     * Mutator method to set the data variable of the tile
+     */
+    public void SetData(int data) {
+        this.data = data;
+        tileObject.GetComponent<Renderer>().material.color
+            = data == 0 ? Color.white : new Color(Mathf.Max(255f - data * 100, 0), Mathf.Max(255f - data * 100, 0), Mathf.Max(255f - data * 100, 0));
+    }
+
+    /**
+     * Find the gridded distance between this tile and the other
+     * @param other - the tile to measure distance between
+     * @return the length of the shortest path between the two tiles
+     */
+    public int GridDistanceFrom(HexTile other) {
+        return (Mathf.Abs(this.x - other.GetX()) + Mathf.Abs(this.y - other.GetY()) + Mathf.Abs(this.z - other.GetZ())) / 2;
+    }
+
+    /**
+     * Find the Euclidean distance between this tile and the other
+     * @param other - the tile to measure distance between
+     * @return the length of the shortest path between the two tiles
+     */
+    public float EulDistanceFrom(HexTile other) {
+        return Mathf.Sqrt((this.GetGeomX() - other.GetGeomX()) * (this.GetGeomX() - other.GetGeomX())
+            + (this.GetGeomY() - other.GetGeomY()) * (this.GetGeomY() - other.GetGeomY()));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    void OnMouseEnter() {
+        SetData(5);
+    }
+
+    private void OnMouseDown() {
+        if (focusTile) {
+            focusTile.SetData(0);
+            focusTile = null;
+        } else {
+            focusTile = this;
+            this.SetData(5);
+        }
+    }
+
+    void OnMouseExit() {
+        if (focusTile != this) {
+            SetData(0);
+        }
+    }
+}
