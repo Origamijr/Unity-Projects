@@ -13,6 +13,10 @@ public class HexTile : MonoBehaviour {
 
     // Data
     private int data;
+    public bool flag = false;
+
+    private Board board;
+    private ArrayList affected;
 
     // GameObjects
     public GameObject tileObject;
@@ -22,6 +26,7 @@ public class HexTile : MonoBehaviour {
 
     // Static variables
     private static HexTile focusTile = null;
+    private static HexTile currTile = null;
 
 
     /**
@@ -29,6 +34,10 @@ public class HexTile : MonoBehaviour {
      */
     void Start() {
         SetData(0);
+    }
+
+    public void Delete() {
+        Destroy(gameObject);
     }
 
     public int GetX() {
@@ -43,16 +52,25 @@ public class HexTile : MonoBehaviour {
         return z;
     }
 
-    public int GetGeomX() {
+    public float GetGeomX() {
         return geomX;
     }
 
-    public int GetGeomY() {
+    public float GetGeomY() {
         return geomY;
+    }
+
+    public bool GetActive() {
+        return this.gameObject.activeSelf;
     }
 
     public HexTile GetFocus() {
         return focusTile;
+    }
+
+    public void SetBoard(Board board) {
+        this.board = board;
+        affected = new ArrayList();
     }
 
     /**
@@ -78,8 +96,18 @@ public class HexTile : MonoBehaviour {
      */
     public void SetData(int data) {
         this.data = data;
-        tileObject.GetComponent<Renderer>().material.color
-            = data == 0 ? Color.white : new Color(Mathf.Max(255f - data * 100, 0), Mathf.Max(255f - data * 100, 0), Mathf.Max(255f - data * 100, 0));
+        if (data != 0) {
+            tileObject.GetComponent<Renderer>().material.color
+                = data == 0 ? Color.white : new Color(Mathf.Max(255f - data * 100, 0),
+                Mathf.Max(255f - data * 100, 0), Mathf.Max(255f - data * 100, 0));
+        } else {
+            tileObject.GetComponent<Renderer>().material.color
+                = Color.HSVToRGB((30 * (x+50) % 360) / 360f, 0.90f, 0.75f);
+        }
+    }
+
+    public void SetActive(bool active) {
+        this.gameObject.SetActive(active);
     }
 
     /**
@@ -101,6 +129,10 @@ public class HexTile : MonoBehaviour {
             + (this.GetGeomY() - other.GetGeomY()) * (this.GetGeomY() - other.GetGeomY()));
     }
 
+    public override string ToString() {
+        return ("(" + x + "," + y + "," + z + ") at (" + geomX + "," + geomY + "):\tdata" + data + "\tflag" + flag);
+    }
+
 
 
 
@@ -113,22 +145,39 @@ public class HexTile : MonoBehaviour {
 
 
     void OnMouseEnter() {
-        SetData(5);
+        if (currTile) {
+            foreach (HexTile tile in currTile.affected) {
+                tile.SetData(0);
+            }
+        }
+        currTile = this;
+
+        if (focusTile) {
+            LinkedList<HexTile> path = board.FindPathAStar(focusTile, this);
+
+            path.Remove(this);
+            this.SetData(5);
+
+            foreach (HexTile tile in path) {
+                tile.SetData(5);
+                affected.Add(tile);
+            }
+        } else {
+            SetData(5);
+        }
     }
 
     private void OnMouseDown() {
         if (focusTile) {
-            focusTile.SetData(0);
             focusTile = null;
         } else {
             focusTile = this;
-            this.SetData(5);
         }
     }
 
     void OnMouseExit() {
         if (focusTile != this) {
-            SetData(0);
+            this.SetData(0);
         }
     }
 }
