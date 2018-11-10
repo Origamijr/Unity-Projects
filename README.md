@@ -12,6 +12,9 @@ Experimentation with cubic representation of hex grids. Supports basic A* algori
 ## Cut'n Corner (You Cut I Choose)
 Small turn based asymmetric minigame created for School's gam jam inspired by the "You Cut I Choose" conflict resolution. Involves two players: the edgelord and the ghost. The ghost collects points by wlaking on point tiles, while the edgelord chooses where to place a fence after the ghost moves. The game is over when the ghost is cornered.
 
+## [Bird](https://github.com/D1o0g9s/Bird)
+Created for HackXR hackathon for VR/AR applications. Primitive flight simulator in HTC Vive, using controllers to ascend, thrust, and turn via flapping. Won best medical hack.
+
 ## [Infinite Dungeon Dive](https://github.com/Origamijr/ECGameJam2018)
 Game Page: https://origamijr.itch.io/infinite-dungeon-dive
 
